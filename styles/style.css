@@ -1,0 +1,22 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+}
+html, body {
+    height: 90%;
+    background-color: rgb(80, 80, 80);
+}
+#goBack {
+    display: none;
+}
+#clickMe {
+    margin-top: 1%;
+    padding: 1%;
+}
+#page {
+    width: 61%;
+    height: 90%;
+    margin: 0px auto;
+    background-color: lightgrey;
+    padding: 2%;
+}
