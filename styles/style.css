@@ -6,12 +6,60 @@ html, body {
     height: 90%;
     background-color: rgb(80, 80, 80);
 }
+.picture {
+    float: right;
+    width: 200px;
+    height: 130px;
+}
+.resultTitle{
+    font-size: 40px;
+}
+#picturePaper {
+    float: right;
+    width: 190px;
+    height: 160px;
+}
+#playerrockwin {
+    display: none;
+}
+#playerrocktie {
+    display: none;
+}
+#playerrocklose {
+    display: none;
+}
+#playerpaperwin {
+    display: none;
+}
+#playerpapertie {
+    display: none;
+}
+#playerpaperlose {
+    display: none;
+}
+#playerscissorswin {
+    display: none;
+}
+#playerscissorstie {
+    display: none;
+}
+#playerscissorslose {
+    display: none;
+}
 #goBack {
     display: none;
 }
+#goBackbtn {
+    background-color: rgb(209, 0, 0);
+    position: fixed;
+    top: 250px;
+    padding: 0.5%;
+}
 #clickMe {
-    margin-top: 1%;
-    padding: 1%;
+    background-color: greenyellow;
+    position: fixed;
+    top: 250px;
+    padding: 0.5%;
 }
 #page {
     width: 61%;
