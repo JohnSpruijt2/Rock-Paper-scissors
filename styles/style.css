@@ -8,16 +8,17 @@ html, body {
 }
 .picture {
     float: right;
-    width: 200px;
-    height: 130px;
+    width: 10rem;
 }
 .resultTitle{
-    font-size: 40px;
+    font-size: 5em;
+}
+.resultSubTitle{
+    font-size: 1em;
 }
 #picturePaper {
     float: right;
-    width: 190px;
-    height: 160px;
+    width: 10rem;
 }
 #playerrockwin {
     display: none;
@@ -52,13 +53,13 @@ html, body {
 #goBackbtn {
     background-color: rgb(209, 0, 0);
     position: fixed;
-    top: 250px;
+    top: 20rem;
     padding: 0.5%;
 }
 #clickMe {
     background-color: greenyellow;
     position: fixed;
-    top: 250px;
+    top: 20rem;
     padding: 0.5%;
 }
 #page {
@@ -67,4 +68,7 @@ html, body {
     margin: 0px auto;
     background-color: lightgrey;
     padding: 2%;
+}
+h1 {
+    font-size: 2em;
 }
