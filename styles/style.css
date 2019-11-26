@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body {
-    height: 40rem;
+    height: 90vh;
     background-color: rgb(80, 80, 80);
 }
 .picture {
@@ -52,20 +52,20 @@ body {
 }
 #goBackbtn {
     background-color: rgb(209, 0, 0);
-    position: absolute;
-    top: 20rem;
+    position: inline-block;
+    margin-top: 15vh;
     padding: 0.5%;
     width: 7rem;
 }
 #clickMe {
     background-color: greenyellow;
-    position: absolute;
-    top: 20rem;
+    position: inline-block;
+    margin-top: 13.5vh;
     padding: 0.5%;
     width: 7rem;
 }
 #page {
-    height: 40em;
+    height: 90vh;
     width: 80rem;
     margin: 0px auto;
     background-color: lightgrey;
@@ -73,4 +73,31 @@ body {
 }
 h1 {
     font-size: 2em;
+}
+@media only screen and (max-width: 1024px) {
+
+    .picture {
+        display: none;
+    }
+    #picturePaper {
+        display: none;
+    }
+    #page {
+        width: 90vw;
+        height: 95vh;
+    }
+    body {
+        font-size: 3vh;
+    }
+    .resultTitle {
+        font-size: 10vh;
+    }
+    #clickMe {
+        height: 4em;
+        margin-top: 11vh;
+    }
+    #goBackbtn {
+        height: 4em;
+        margin-top: 22vh;
+    }
 }
