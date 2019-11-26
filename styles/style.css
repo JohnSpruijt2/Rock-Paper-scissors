@@ -93,11 +93,15 @@ h1 {
         font-size: 10vh;
     }
     #clickMe {
-        height: 4em;
+        height: 10vh;
+        width: 28vw;
         margin-top: 11vh;
+        font-size: 7vh;
     }
     #goBackbtn {
-        height: 4em;
+        height: 10vh;
+        width: 35vw;
         margin-top: 22vh;
+        font-size: 7vh;
     }
 }
