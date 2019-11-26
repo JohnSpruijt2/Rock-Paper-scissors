@@ -52,15 +52,17 @@ html, body {
 }
 #goBackbtn {
     background-color: rgb(209, 0, 0);
-    position: fixed;
+    position: absolute;
     top: 20rem;
     padding: 0.5%;
+    width: 7rem;
 }
 #clickMe {
     background-color: greenyellow;
-    position: fixed;
+    position: absolute;
     top: 20rem;
     padding: 0.5%;
+    width: 7rem;
 }
 #page {
     width: 61%;
