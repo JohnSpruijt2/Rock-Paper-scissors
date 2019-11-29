@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="styles/style.css">
-<meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -11,86 +11,28 @@
 
 <div id="page">
 
-<div id="firstpage">
+<div id="firstpage" style="display: block;">
 
 <img src="img/rock.png" alt="picture of a rock" class="picture">
 <img src="img/paper.png" alt="picture of paper" id="picturePaper">
 <img src="img/scissors.png" alt="picture of a pair of scissors" class="picture">
-<h1>Rock Paper Scissors</h1>
-<form id="options">
-    <input type="radio" name="playerInput" value="rock" checked> Rock <br>
-    <input type="radio" name="playerInput" value="paper"> Paper <br>
-    <input type="radio" name="playerInput" value="scissors"> Scissors <br>
-    <input id="clickMe" type="button" value="Submit choice" onclick="rps();">
-</form>
+<h1 id="firstpageTitle">Rock Paper Scissors</h1>
+    <button id="btn1" onclick="rock()"><a>Rock</a></button><br>
+    <button id="btn2" onclick="paper()"><a>Paper</a></button> <br>
+    <button id="btn3" onclick="scissors()"><a>Scissors</a></button>  <br>
+    <h3 id="warning">Please choose something first</h3>
+    <button id="clickMe" onclick="submit()"><a>submit</a></button>
 
 </div>
-
-<div id="playerrockwin">
-<img src="img/brokenscissors2.png" alt="picture of broken scissors" class="picture">
-<img src="img/rock.png" alt="picture of a rock" class="picture">
-<a class="resultTitle">You won!</a> <br>
-<a class="resultSubtitle">By choosing rock</a>
-</div>
-
-<div id="playerrocktie">
-<img src="img/rock.png" alt="picture of a rock" class="picture">
-<img src="img/rock.png" alt="picture of a rock" class="picture">
-<a class="resultTitle">You tied</a> <br>
-<a class="resultSubtitle">By choosing rock</a>
-</div>
-
-<div id="playerrocklose">
-<img src="img/paper.png" alt="picture of paper" id="picturePaper">
-<img src="img/rock.png" alt="picture of a rock" class="picture">
-<a class="resultTitle">You lost!</a> <br>
-<a class="resultSubtitle">By choosing rock</a>
-</div>
-
-<div id="playerpaperwin">
-<img src="img/rock.png" alt="picture of a rock" class="picture">
-<img src="img/paper.png" alt="picture of paper" id="picturePaper">
-<a class="resultTitle">You won!</a> <br>
-<a class="resultSubtitle">By choosing paper</a>
-</div>
-
-<div id="playerpapertie">
-<img src="img/paper.png" alt="picture of paper" id="picturePaper">
-<img src="img/paper.png" alt="picture of paper" id="picturePaper">
-<a class="resultTitle">You tied</a> <br>
-<a class="resultSubtitle">By choosing paper</a>
-</div>
-
-<div id="playerpaperlose">
-<img src="img/scissors2.png" alt="picture of a pair of scissors" class="picture">
-<img src="img/brokenpaper.png" alt="picture of paper" id="picturePaper">
-<a class="resultTitle">You lost!</a> <br>
-<a class="resultSubtitle">By choosing paper</a>
-</div>
-
-<div id="playerscissorswin">
-<img src="img/brokenpaper.png" alt="picture of paper" id="picturePaper">
-<img src="img/scissors.png" alt="picture of a pair of scissors" class="picture">
-<a class="resultTitle">You won!</a> <br>
-<a class="resultSubtitle">By choosing scissors</a>
-</div>
-
-<div id="playerscissorstie">
-<img src="img/scissors2.png" alt="picture of a pair of scissors" class="picture">
-<img src="img/scissors.png" alt="picture of a pair of scissors" class="picture">
-<a class="resultTitle">You tied</a> <br>
-<a class="resultSubtitle">By choosing scissors</a>
-</div>
-
-<div id="playerscissorslose">
-<img src="img/rock.png" alt="picture of a rock" class="picture">
-<img src="img/brokenscissors.png" alt="picture of a broken pair of scissors" class="picture">
-<a class="resultTitle">You lost!</a> <br>
-<a class="resultSubtitle">By choosing scissors</a>
-</div>
-
-<div id="goBack">
-<button onclick="hidestuff()" id="goBackbtn">Go back</button>
+<div id="resultpage">
+    <h1 id="resultTitle"></h1>
+    <h2 id="resultSubTitle"></h2>
+    <button id="goBackbtn" onclick="hide()">Go Back</button> 
+    <br>
+    <br>
+    <br>
+    <img src="" alt="result image" id="resultImg1" class="resultImgs">
+    <img src="" alt="result image" id="resultImg2" class="resultImgs">
 </div>
 </div>
 </body>

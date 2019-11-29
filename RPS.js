@@ -1,81 +1,97 @@
-function hidestuff() {
-    var hidegoback = document.getElementById('goBack')
-    var hideoptions = document.getElementById('firstpage')
-    var prockwin = document.getElementById('playerrockwin') //variables to show and hide results
-    var procktie = document.getElementById('playerrocktie')
-    var procklose = document.getElementById('playerrocklose')
-    var ppaperwin = document.getElementById('playerpaperwin')
-    var ppapertie = document.getElementById('playerpapertie')
-    var ppaperlose = document.getElementById('playerpaperlose')
-    var pscissorswin = document.getElementById('playerscissorswin')
-    var pscissorstie = document.getElementById('playerscissorstie')
-    var pscissorslose = document.getElementById('playerscissorslose')
+var playerchoice = "none"
+var firstpage = document.getElementById("firstpage")
+var winResult = "none"
+firstpage.style.display = "block"
 
-    prockwin.style.display = "none" //hides results
-    procktie.style.display = "none"
-    procklose.style.display = "none"
-    ppaperwin.style.display = "none"
-    ppapertie.style.display = "none"
-    ppaperlose.style.display = "none"
-    pscissorswin.style.display = "none"
-    pscissorstie.style.display = "none"
-    pscissorslose.style.display = "none"
-    if (hideoptions.style.display == "none") { //resets page
-        hidegoback.style.display = "none"
-        hideoptions.style.display = "block"
+function reset() {
+    playerchoice = "none"
+    document.getElementById("btn1").disabled = false;
+    document.getElementById("btn1").style.backgroundColor = ""
+    document.getElementById("btn1").style.color = "black"
+
+    document.getElementById("btn2").disabled = false;
+    document.getElementById("btn2").style.backgroundColor = ""
+    document.getElementById("btn2").style.color = "black"
+
+    document.getElementById("btn3").disabled = false;
+    document.getElementById("btn3").style.backgroundColor = ""
+    document.getElementById("btn3").style.color = "black"
+
+    document.getElementById("warning").style.display = "none"
+}
+
+function rock() {
+    reset()
+    playerchoice = "rock"
+    document.getElementById("btn1").disabled = true;
+    document.getElementById("btn1").style.backgroundColor = " rgb(48, 48, 48)"
+    document.getElementById("btn1").style.color = "white"
+}
+function paper() {
+    reset()
+    playerchoice = "paper"
+    document.getElementById("btn2").disabled = true;
+    document.getElementById("btn2").style.backgroundColor = " rgb(48, 48, 48)"
+    document.getElementById("btn2").style.color = "white"
+}
+function scissors() {
+    reset()
+    playerchoice = "scissors"
+    document.getElementById("btn3").disabled = true;
+    document.getElementById("btn3").style.backgroundColor = " rgb(48, 48, 48)"
+    document.getElementById("btn3").style.color = "white"
+}
+function submit() {
+    if (playerchoice == "none") {
+        document.getElementById("warning").style.display = "block"
     }
     else {
-        hidegoback.style.display = "block"
-        hideoptions.style.display = "none"
+        result(playerchoice)
+        playerchoice = "none"
+        reset()
     }
 }
 
-function rps() {
-    var playerOutput = document.querySelector('input[name="playerInput"]:checked').value; //requests the answer the player inserts
-    var computerInput = Math.floor(Math.random() * (4 - 1) + 1) //random number generator
-    var prockwin = document.getElementById('playerrockwin') //variables to show and hide results
-    var procktie = document.getElementById('playerrocktie')
-    var procklose = document.getElementById('playerrocklose')
-    var ppaperwin = document.getElementById('playerpaperwin')
-    var ppapertie = document.getElementById('playerpapertie')
-    var ppaperlose = document.getElementById('playerpaperlose')
-    var pscissorswin = document.getElementById('playerscissorswin')
-    var pscissorstie = document.getElementById('playerscissorstie')
-    var pscissorslose = document.getElementById('playerscissorslose')
-    if (playerOutput == "rock") {
-        hidestuff()
-        if (computerInput == 1) {
-            prockwin.style.display = "block"
-        }
-        else if (computerInput == 2) {
-            procktie.style.display = "block"
-        }
-        else if (computerInput == 3) {
-            procklose.style.display = "block"
-        }
+function hide() {
+    if (document.getElementById("firstpage").style.display == "block") {
+        document.getElementById("firstpage").style.display = "none"
+        document.getElementById("resultpage").style.display = "block"
     }
-    else if (playerOutput == "paper") {
-        hidestuff()
-        if (computerInput == 1) {
-            ppaperwin.style.display = "block"
-        }
-        else if (computerInput == 2) {
-            ppapertie.style.display = "block"
-        }
-        else if (computerInput == 3) {
-            ppaperlose.style.display = "block"
-        }
+    else {
+        document.getElementById("firstpage").style.display = "block"
+    document.getElementById("resultpage").style.display = "none"
     }
-    else if (playerOutput == "scissors") {
-        hidestuff()
-        if (computerInput == 1) {
-            pscissorswin.style.display = "block"
-        }
-        else if (computerInput == 2) {
-            pscissorstie.style.display = "block"
-        }
-        else if (computerInput == 3) {
-            pscissorslose.style.display = "block"
-        }
+}
+
+function result(type) {
+    hide()
+    if (type == "rock") {
+        var type2 = "scissors"
+        var type3 = "paper"
+    }
+    else if (type == "paper") {
+        var type2 = "rock"
+        var type3 = "scissors"
+    }
+    else if (type == "scissors") {
+        var type2 = "paper"
+        var type3 = "rock"
+    }
+    document.getElementById("resultSubTitle").innerHTML = "You chose " + type
+    var computer = Math.floor((Math.random() * 3) + 1);
+    if (computer == 1) {
+        document.getElementById("resultTitle").innerHTML = "You won!"
+        document.getElementById("resultImg1").src = "img/"+type+".png"
+        document.getElementById("resultImg2").src = "img/broken"+type2+"2.png"
+    }
+    else if (computer == 2) {
+        document.getElementById("resultTitle").innerHTML = "You tied"
+        document.getElementById("resultImg1").src = "img/broken"+type+".png"
+        document.getElementById("resultImg2").src = "img/broken"+type+"2.png"
+    }
+    else if (computer == 3) {
+        document.getElementById("resultTitle").innerHTML = "You lost!"
+        document.getElementById("resultImg1").src = "img/broken"+type+".png"
+        document.getElementById("resultImg2").src = "img/"+type3+"2.png"
     }
 }

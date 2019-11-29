@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="styles/style.css">
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+<title>Rock Paper Scissors</title>
+</head>
+<body>
+<script src="RPS.js"></script>
+
+<div id="page">
+
+<div id="firstpage">
+
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<img src="img/paper.png" alt="picture of paper" id="picturePaper">
+<img src="img/scissors.png" alt="picture of a pair of scissors" class="picture">
+<h1>Rock Paper Scissors</h1>
+<form id="options">
+    <input type="radio" name="playerInput" value="rock" checked> Rock <br>
+    <input type="radio" name="playerInput" value="paper"> Paper <br>
+    <input type="radio" name="playerInput" value="scissors"> Scissors <br>
+    <input id="clickMe" type="button" value="Submit choice" onclick="rps();">
+</form>
+
+</div>
+
+<div id="playerrockwin">
+<img src="img/brokenscissors2.png" alt="picture of broken scissors" class="picture">
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<a class="resultTitle">You won!</a> <br>
+<a class="resultSubtitle">By choosing rock</a>
+</div>
+
+<div id="playerrocktie">
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<a class="resultTitle">You tied</a> <br>
+<a class="resultSubtitle">By choosing rock</a>
+</div>
+
+<div id="playerrocklose">
+<img src="img/paper.png" alt="picture of paper" id="picturePaper">
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<a class="resultTitle">You lost!</a> <br>
+<a class="resultSubtitle">By choosing rock</a>
+</div>
+
+<div id="playerpaperwin">
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<img src="img/paper.png" alt="picture of paper" id="picturePaper">
+<a class="resultTitle">You won!</a> <br>
+<a class="resultSubtitle">By choosing paper</a>
+</div>
+
+<div id="playerpapertie">
+<img src="img/paper.png" alt="picture of paper" id="picturePaper">
+<img src="img/paper.png" alt="picture of paper" id="picturePaper">
+<a class="resultTitle">You tied</a> <br>
+<a class="resultSubtitle">By choosing paper</a>
+</div>
+
+<div id="playerpaperlose">
+<img src="img/scissors2.png" alt="picture of a pair of scissors" class="picture">
+<img src="img/brokenpaper.png" alt="picture of paper" id="picturePaper">
+<a class="resultTitle">You lost!</a> <br>
+<a class="resultSubtitle">By choosing paper</a>
+</div>
+
+<div id="playerscissorswin">
+<img src="img/brokenpaper.png" alt="picture of paper" id="picturePaper">
+<img src="img/scissors.png" alt="picture of a pair of scissors" class="picture">
+<a class="resultTitle">You won!</a> <br>
+<a class="resultSubtitle">By choosing scissors</a>
+</div>
+
+<div id="playerscissorstie">
+<img src="img/scissors2.png" alt="picture of a pair of scissors" class="picture">
+<img src="img/scissors.png" alt="picture of a pair of scissors" class="picture">
+<a class="resultTitle">You tied</a> <br>
+<a class="resultSubtitle">By choosing scissors</a>
+</div>
+
+<div id="playerscissorslose">
+<img src="img/rock.png" alt="picture of a rock" class="picture">
+<img src="img/brokenscissors.png" alt="picture of a broken pair of scissors" class="picture">
+<a class="resultTitle">You lost!</a> <br>
+<a class="resultSubtitle">By choosing scissors</a>
+</div>
+
+<div id="goBack">
+<button onclick="hidestuff()" id="goBackbtn">Go back</button>
+</div>
+</div>
+</body>
+</html>
