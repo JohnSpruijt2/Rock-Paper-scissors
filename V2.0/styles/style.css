@@ -1,16 +1,21 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Archivo', sans-serif;
     padding: 0px;
 }
 button {
-    width: 6em;
-    height: 3em;
+    width: 10em;
+    height: 5em;
     margin-top: 1em;
     border: solid 1px black;
-    background-color: rgb(122, 246, 215);
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+button a {
+    font-size: 2em;
+    font-weight: 600;
 }
 button:hover {
-    background-color: rgb(4, 0, 132);
+    background-color: rgb(132, 132, 132);
     color: white;
 }
 body {
@@ -21,8 +26,12 @@ body {
     float: right;
     width: 10rem;
 }
+#firstpageTitle {
+    font-weight: 900;
+}
 .resultTitle{
     font-size: 5em;
+    font-weight: 900;
 }
 .resultSubTitle{
     font-size: 1em;
@@ -30,20 +39,24 @@ body {
 #warning {
     display: none;
     position: absolute;
+    font-size: 2em;
 }
 #picturePaper {
     float: right;
     width: 10rem;
 }
-#result {
+#resultpage {
     display: none;
 }
 #goBackbtn {
-    background-color: rgb(209, 0, 0);
+    background-color: rgb(229, 0, 0);
     position: inline-block;
     margin-top: 15vh;
     padding: 0.5%;
     width: 7rem;
+}
+#goBackbtn:hover {
+    background-color: rgb(111, 0, 0);
 }
 #clickMe {
     background-color: greenyellow;
@@ -65,6 +78,22 @@ body {
 h1 {
     font-size: 2em;
 }
+#resultImg1 {
+    top: 0;
+    right: 30em;
+    position: absolute;
+    float: right;
+    width: 15vw;
+    margin: 2.5%;
+}
+#resultImg2 {
+    top: 0;
+    right: 10em;
+    position: absolute;
+    float: right;
+    width: 15vw;
+    margin: 2.5%;
+}
 @media only screen and (max-width: 1024px) {
 
     .picture {
@@ -82,6 +111,7 @@ h1 {
     }
     .resultTitle {
         font-size: 10vh;
+        font-weight: 700;
     }
     #clickMe {
         height: 10vh;
@@ -94,5 +124,16 @@ h1 {
         width: 7em;
         margin-top: 20vh;
         font-size: 1em;
+    }
+    #warning {
+        font-size: 1em;
+    }
+    button a {
+        font-size: 2em;
+        font-weight: 700;
+    }
+    .resultImgs {
+        width: 38vw;
+        margin: 2.5%;
     }
 }
