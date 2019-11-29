@@ -1,0 +1,98 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+}
+button {
+    width: 6em;
+    height: 3em;
+    margin-top: 1em;
+    border: solid 1px black;
+    background-color: rgb(122, 246, 215);
+}
+button:hover {
+    background-color: rgb(4, 0, 132);
+    color: white;
+}
+body {
+    height: 90vh;
+    background-color: rgb(80, 80, 80);
+}
+.picture {
+    float: right;
+    width: 10rem;
+}
+.resultTitle{
+    font-size: 5em;
+}
+.resultSubTitle{
+    font-size: 1em;
+}
+#warning {
+    display: none;
+    position: absolute;
+}
+#picturePaper {
+    float: right;
+    width: 10rem;
+}
+#result {
+    display: none;
+}
+#goBackbtn {
+    background-color: rgb(209, 0, 0);
+    position: inline-block;
+    margin-top: 15vh;
+    padding: 0.5%;
+    width: 7rem;
+}
+#clickMe {
+    background-color: greenyellow;
+    position: inline-block;
+    margin-top: 13.5vh;
+    padding: 0.5%;
+    width: 7rem;
+}
+#clickMe:hover {
+    background-color: darkgreen;
+}
+#page {
+    height: 90vh;
+    width: 80rem;
+    margin: 0px auto;
+    background-color: lightgrey;
+    padding: 2%;
+}
+h1 {
+    font-size: 2em;
+}
+@media only screen and (max-width: 1024px) {
+
+    .picture {
+        display: none;
+    }
+    #picturePaper {
+        display: none;
+    }
+    #page {
+        width: 90vw;
+        height: 95vh;
+    }
+    body {
+        font-size: 3vh;
+    }
+    .resultTitle {
+        font-size: 10vh;
+    }
+    #clickMe {
+        height: 10vh;
+        width: 7em;
+        margin-top: 11vh;
+        font-size: 1em;
+    }
+    #goBackbtn {
+        height: 10vh;
+        width: 7em;
+        margin-top: 20vh;
+        font-size: 1em;
+    }
+}
